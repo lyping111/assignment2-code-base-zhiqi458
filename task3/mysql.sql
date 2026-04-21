@@ -38,7 +38,7 @@ CREATE TABLE `task3` (
 
 INSERT INTO `task3`(`id`, `receiving_date`, `tracking_number`, `product_name`, `CBM`, `weight`) VALUES (1, '2023-04-20 03:24:00', 'TRK001', 'Product A', 10.50, 200.00);
 
-UPDATE `task3` SET `id`='1',`receiving_date`='2023-04-20 03:24:00',`tracking_number`='TRK001',`product_name`='Product A',`CBM`='10.50',`weight`='200.00' WHERE 1;
+UPDATE `task3` SET `id`='1',`receiving_date`='2023-04-20 03:24:00',`tracking_number`='TRK001',`product_name`='Product A',`CBM`='10.50',`weight`='200.00' WHERE id=1;
 
 DELETE FROM `task3` WHERE id=1;
 --
