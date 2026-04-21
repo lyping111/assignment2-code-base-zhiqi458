@@ -36,6 +36,11 @@ CREATE TABLE `task3` (
   `weight` decimal(10,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+INSERT INTO `task3`(`id`, `receiving_date`, `tracking_number`, `product_name`, `CBM`, `weight`) VALUES (1, '2023-04-20 03:24:00', 'TRK001', 'Product A', 10.50, 200.00);
+
+UPDATE `task3` SET `id`='1',`receiving_date`='2023-04-20 03:24:00',`tracking_number`='TRK001',`product_name`='Product A',`CBM`='10.50',`weight`='200.00' WHERE 1;
+
+DELETE FROM `task3` WHERE 0;
 --
 -- Indexes for dumped tables
 --
