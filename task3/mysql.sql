@@ -40,7 +40,7 @@ INSERT INTO `task3`(`id`, `receiving_date`, `tracking_number`, `product_name`, `
 
 UPDATE `task3` SET `id`='1',`receiving_date`='2023-04-20 03:24:00',`tracking_number`='TRK001',`product_name`='Product A',`CBM`='10.50',`weight`='200.00' WHERE 1;
 
-DELETE FROM `task3` WHERE 0;
+DELETE FROM `task3` WHERE id=1;
 --
 -- Indexes for dumped tables
 --
@@ -61,6 +61,12 @@ ALTER TABLE `task3`
 ALTER TABLE `task3`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
+
+AFTER TABLE `task3`
+  ADD `abc` varchar(30)
+
+AFTER TABLE `task3`
+  DROP `abc`
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
